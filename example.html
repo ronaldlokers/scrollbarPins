@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>scrollbarPins example</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            #scrollbarPinsContainer
+            {
+                height: 100%;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 9999;
+            }
+
+            #scrollbarPinsContainer li
+            {
+                cursor: pointer;
+                list-style: none;
+                margin: 0;
+                padding: 0 3px;
+                position: absolute;
+                right: 11px;
+                white-space: nowrap;
+            }
+
+            #scrollbarPinsContainer li {
+                position: relative;
+                background: #000;
+                color: #eee;
+                height: 18px;
+            }
+            #scrollbarPinsContainer li:before {
+                left: 100%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(0, 0, 0, 0);
+                border-left-color: #000;
+                border-width: 9px;
+                top: 50%;
+                margin-top: -9px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="content">
+            <h1 data-scrollbarpins='{ "id": 1, "title": "Item 1"}'>Item 1</h1>
+            <div style="background: hotpink;height:400px;width: 80%;"></div>
+            <h2 data-scrollbarpins='{ "id": 2, "title": "Item 2"}'>Item 2</h2>
+            <div style="background: hotpink;height:800px;width: 80%;"></div>
+            <h2 data-scrollbarpins='{ "id": 3, "title": "Item 3"}'>Item 3</h2>
+            <div style="background: hotpink;height:400px;width: 80%;"></div>
+            <h2 data-scrollbarpins='{ "id": 4, "title": "Item 4"}'>Item 4</h2>
+            <div style="background: hotpink;height:200px;width: 80%;"></div>
+            <h2 data-scrollbarpins='{ "id": 5, "title": "Item 5"}'>Item 5</h2>
+            <div style="background: hotpink;height:1000px;width: 80%;"></div>
+
+        </div>
+ 
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <script src="jquery.scrollbarpins.js"></script>
+
+    </body>
+</html>
